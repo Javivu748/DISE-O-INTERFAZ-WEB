@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animado</title>
+    <style>
+        body {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            position: relative;
+            width: 200px;
+            height: 174px;
+            margin: 50px auto;
+
+        }
+
+        .imagen img {
+            width: 70%;
+        }
+
+        .imagen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            animation: apareceImg 1.5s ease-in forwards;
+            animation-delay: 2s;
+        }
+
+        .triangulo {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 86.6px solid #D4AF37;
+            animation: luz 1s ease-in;
+            animation-delay: 3s;
+        }
+
+        .triangulo:nth-child(1) {
+            animation: mover1 3s ease-in forwards;
+            top: -100px;
+            left: 50px;
+        }
+
+        .triangulo:nth-child(2) {
+            animation: mover2 3s ease-in forwards;
+            top: 170px;
+            left: -150px;
+        }
+
+        .triangulo:nth-child(3) {
+            animation: mover3 3s ease-in forwards;
+            top: 170px;
+            left: 250px;
+        }
+
+        @keyframes mover1 {
+            to {
+                top: 0;
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes mover2 {
+            to {
+                top: 86.6px;
+                left: 0;
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes mover3 {
+            to {
+                top: 86.6px;
+                left: 100px;
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes apareceImg { 
+            from {
+                opacity: 0;
+                transform: translateX(30%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="triangulo"></div>
+        <div class="triangulo"></div>
+        <div class="triangulo"></div>
+    </div>
+    <div class="imagen">
+        <img src="zeldaaaaaaaaa.webp" alt="">
+    </div>
+</body>
+
+</html>

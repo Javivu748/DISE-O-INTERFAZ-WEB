@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+</head>
+<style>
+    .navGrid ul{
+        display: grid;
+        grid-template-columns:repeat(5,1fr) ;
+        
+    }
+    .navGrid li{
+        text-align: center;
+        list-style: none;
+        border: 1px solid;
+        background-color: lightgray;
+    }
+    .navGrid a{
+        display: grid;
+        grid-template-columns:repeat(5) ;
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+        transition: all 0.3s;
+    }
+    .navGrid li:hover{
+        transform: translateY(-2px);
+    }
+</style>
+<body>
+    <div class="navGrid">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+</body>
+</html>
